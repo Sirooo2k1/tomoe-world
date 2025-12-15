@@ -1,5 +1,4 @@
 import React from 'react'
-import nishantomodiverImage from '../Images/nishantomodiver.png'
 import mirrorLakeImage from '../Images/img_02.png'
 import activitiesImage from '../Images/img2_2.png'
 import logoTomoe02 from '../Images/Logo_tomoe_02.png'
@@ -25,18 +24,8 @@ const Activities = ({ language = 'ja' }) => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
       <article className="p-8 md:p-12">
-        <header className="mb-8">
-          <h1 className="mb-6">
-            <img
-              src={nishantomodiverImage}
-              alt={t('共楽・共学・共育・共笑®︎｜共に楽しみ、学び、育ち、共に笑おう', '共楽・共学・共育・共笑®︎ | Let\'s enjoy, learn, grow, and laugh together')}
-              className="w-full h-auto max-w-full"
-            />
-          </h1>
-        </header>
-
         {/* Ở đây sẽ thêm nội dung chi tiết cho 共笑®︎活動 */}
         <section className="text-gray-700 leading-relaxed text-base md:text-lg space-y-4">
           <p className="text-2xl md:text-3xl font-display font-bold text-headings">

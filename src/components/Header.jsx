@@ -235,7 +235,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, onNavigate, selectedLang, setSelect
                 />
               </a>
               <a
-                href="mailto:staff@worldof.tomoe.jp"
+                href="mailto:staff@tomoe-world.com"
                 className="hover:opacity-70 transition-opacity duration-200 flex items-center justify-center rounded-full border-2 border-white overflow-hidden"
                 style={{ width: '40px', height: '40px', minWidth: '40px', minHeight: '40px' }}
                 aria-label="Email"

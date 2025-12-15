@@ -1,6 +1,5 @@
 import React from 'react'
 import mirrorLakeImage from '../Images/img_10.png'
-import nishantaLogo from '../Images/nishanta_logo.png'
 import jyukuImage from '../Images/img_01.png'
 import logoTomoe02 from '../Images/Logo_tomoe_02.png'
 
@@ -25,14 +24,7 @@ const Jyuku = ({ language = 'ja' }) => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex justify-center mb-10">
-          <img
-            src={nishantaLogo}
-            alt={t('にしゃんた', 'Nishanta')}
-            className="w-full h-auto max-w-full object-contain"
-          />
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
         <article className="p-8 md:p-12 text-gray-700 leading-relaxed text-base md:text-lg space-y-6">
           <p className="text-2xl md:text-3xl font-display font-bold text-headings">
             {t('共笑®︎塾', 'TOMOE Jyuku')}
