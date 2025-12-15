@@ -54,4 +54,5 @@ tomoe_world/
 - ✅ Instagram feed integration
 - ✅ Smooth scrolling
 - ✅ Modern UI/UX
-
+- ✅ Multilingual support (Japanese/English)
+- ✅ Shop integration với link đến online store
