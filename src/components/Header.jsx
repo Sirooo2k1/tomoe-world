@@ -248,7 +248,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, onNavigate, selectedLang, setSelect
                 />
               </a>
               <a
-                href="https://line.me/ti/p/@tomoe-world"
+                href="https://line.me/R/ti/p/@146lrkfp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity duration-200 flex items-center justify-center"

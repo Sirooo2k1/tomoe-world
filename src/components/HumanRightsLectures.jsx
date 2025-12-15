@@ -239,8 +239,8 @@ const HumanRightsLectures = ({ language = 'ja' }) => {
               }} />
               <p className="indent-4 md:indent-6" dangerouslySetInnerHTML={{
                 __html: t(
-                  '　私たちが抱える"ちがい"を、課題ではなく新たな価値創造の原動力として捉え直すことで、より平和で持続可能な社会を築くことができます。講演依頼やご相談は、<a href="#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">"共笑®︎"事務局</a>までお気軽にご連絡ください。一緒に、違いを活かし、未来を共に創る取り組みを始めましょう！',
-                  '　By reframing the "differences" we carry not as problems but as drivers of new value, we can build a more peaceful, sustainable society. For lecture requests or consultations, please feel free to contact the <a href="#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">"共笑®︎" office</a>. Let\'s start initiatives together to leverage differences and create the future together!'
+                  '　私たちが抱える"ちがい"を、課題ではなく新たな価値創造の原動力として捉え直すことで、より平和で持続可能な社会を築くことができます。講演依頼やご相談は、<a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">"共笑®︎"事務局</a>までお気軽にご連絡ください。一緒に、違いを活かし、未来を共に創る取り組みを始めましょう！',
+                  '　By reframing the "differences" we carry not as problems but as drivers of new value, we can build a more peaceful, sustainable society. For lecture requests or consultations, please feel free to contact the <a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">"共笑®︎" office</a>. Let\'s start initiatives together to leverage differences and create the future together!'
                 )
               }} />
             </div>
@@ -262,8 +262,8 @@ const HumanRightsLectures = ({ language = 'ja' }) => {
               }} />
               <p className="indent-4 md:indent-6" dangerouslySetInnerHTML={{
                 __html: t(
-                  '✧Q. 講演料の目安はありますか？<br />A. 規模や予算に応じてご相談を承っております。<a href="#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">講演依頼・お問い合わせ</a>は事務局まで',
-                  '✧Q. What are typical lecture fees?<br />A. We welcome inquiries based on scale and budget. For <a href="#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">requests or inquiries</a>, contact the office.'
+                  '✧Q. 講演料の目安はありますか？<br />A. 規模や予算に応じてご相談を承っております。<a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">講演依頼・お問い合わせ</a>は事務局まで',
+                  '✧Q. What are typical lecture fees?<br />A. We welcome inquiries based on scale and budget. For <a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">requests or inquiries</a>, contact the office.'
                 )
               }} />
             </section>

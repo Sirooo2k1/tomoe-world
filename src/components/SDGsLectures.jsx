@@ -220,8 +220,8 @@ const SDGsLectures = ({ language = 'ja' }) => {
             </p>
             <p className="indent-4 md:indent-6" dangerouslySetInnerHTML={{
               __html: t(
-                '　講演内容の詳細やご相談は、<a href="#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">"共笑®︎"事務局</a>までお気軽にお問い合わせください。一緒に、多様性を活かし、未来を共に創る取り組みを始めましょう！',
-                '　For details about lecture content or consultations, please feel free to contact the <a href="#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">"共笑®︎" office</a>. Let\'s start initiatives together to leverage diversity and create the future together!'
+                '　講演内容の詳細やご相談は、<a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">"共笑®︎"事務局</a>までお気軽にお問い合わせください。一緒に、多様性を活かし、未来を共に創る取り組みを始めましょう！',
+                '　For details about lecture content or consultations, please feel free to contact the <a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">"共笑®︎" office</a>. Let\'s start initiatives together to leverage diversity and create the future together!'
               )
             }} />
           </div>

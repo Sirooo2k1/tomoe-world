@@ -41,8 +41,8 @@ const Fund = ({ language = 'ja' }) => {
             </p>
             <p dangerouslySetInnerHTML={{
               __html: t(
-                '<span style="color: #8B7355;">共笑®︎活動</span>から得られる収益は、共笑®︎な社会の実現のために効果的に活用されています。特に、多様性による摩擦が引き起こす戦争や内戦の被害者、特に子どもや社会的弱者の医療や社会復帰支援に重点を置いています。これらの具体的な取り組みについては、<a href="#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">共笑®︎事務局</a>にお問い合わせください。',
-                'Revenue from <span style="color: #8B7355;">共笑®︎ Activities</span> is effectively utilized for the realization of a 共笑®︎ society. We place particular emphasis on medical and social reintegration support for victims of wars and civil conflicts caused by friction due to diversity, especially children and socially vulnerable people. For details about these specific initiatives, please contact the <a href="#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">共笑®︎ office</a>.'
+                '<span style="color: #8B7355;">共笑®︎活動</span>から得られる収益は、共笑®︎な社会の実現のために効果的に活用されています。特に、多様性による摩擦が引き起こす戦争や内戦の被害者、特に子どもや社会的弱者の医療や社会復帰支援に重点を置いています。これらの具体的な取り組みについては、<a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">共笑®︎事務局</a>にお問い合わせください。',
+                'Revenue from <span style="color: #8B7355;">共笑®︎ Activities</span> is effectively utilized for the realization of a 共笑®︎ society. We place particular emphasis on medical and social reintegration support for victims of wars and civil conflicts caused by friction due to diversity, especially children and socially vulnerable people. For details about these specific initiatives, please contact the <a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">共笑®︎ office</a>.'
               )
             }} />
           </div>
@@ -68,8 +68,8 @@ const Fund = ({ language = 'ja' }) => {
             </p>
             <p className="text-sm text-gray-600" dangerouslySetInnerHTML={{
               __html: t(
-                '※ 活動の詳細については<a href="#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">事務局</a>お問い合わせてください。',
-                '※ For details about activities, please contact the <a href="#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">office</a>.'
+                '※ 活動の詳細については<a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">事務局</a>お問い合わせてください。',
+                '※ For details about activities, please contact the <a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">office</a>.'
               )
             }} />
           </section>
@@ -80,9 +80,12 @@ const Fund = ({ language = 'ja' }) => {
             <p>
               {t('共笑®︎基金の活動は、皆さまのご協力によって支えられています。', 'The activities of the 共笑®︎ Fund are supported by everyone\'s cooperation.')}
             </p>
-            <p>
-              {t('✧ 寄付に関するお問い合わせページへ：https://tomoe-world.com/ask', '✧ For donation inquiries: https://tomoe-world.com/ask')}
-            </p>
+            <p dangerouslySetInnerHTML={{
+              __html: t(
+                '✧ 寄付に関するお問い合わせページへ：<a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">https://tomoe-world.com/ask</a>',
+                '✧ For donation inquiries: <a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">https://tomoe-world.com/ask</a>'
+              )
+            }} />
             <p>
               {t(
                 '✧ 法人協賛・CSR提携をご検討の方は、',
