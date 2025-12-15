@@ -9,14 +9,14 @@ const Activities = ({ language = 'ja' }) => {
   return (
     <>
       {/* Hero section */}
-      <div className="relative w-full h-screen max-h-[1110px] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${mirrorLakeImage})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-overlay/20 to-black/40" />
-        </div>
-        <div className="relative z-10 h-full flex items-center justify-center">
+      <div className="relative w-full overflow-hidden bg-black">
+        <img
+          src={mirrorLakeImage}
+          alt={t('共笑®︎活動', 'TOMOE Activities')}
+          className="w-full h-auto object-contain block"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-overlay/20 to-black/40" />
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
           <div className="text-center text-white px-4 max-w-4xl">
             <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 drop-shadow-lg">
               {t('共笑®︎活動', 'TOMOE Activities')}
