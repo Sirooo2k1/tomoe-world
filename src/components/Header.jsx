@@ -14,7 +14,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, onNavigate, selectedLang, setSelect
   const currentLang = languages.find((l) => l.code === selectedLang) || languages[0]
   const getAriaLabel = (ja, en) => (selectedLang === 'en' ? en : ja)
   const menuItems = [
-    { id: 'home', labelJa: '共笑®︎とは', labelEn: 'About Tomoe', href: '/about' },
+    { id: 'about', labelJa: '共笑®︎とは', labelEn: 'About Tomoe', href: '/about' },
     {
       id: 'act',
       labelJa: '共笑®︎活動',
@@ -23,6 +23,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, onNavigate, selectedLang, setSelect
       submenu: [
         { id: 'jyuku', labelJa: '共笑®︎塾', labelEn: 'Tomoe Jyuku', href: '/jyuku' },
         { id: 'fund', labelJa: '共笑®︎基金', labelEn: 'Tomoe Fund', href: '/fund' },
+        { id: 'license', labelJa: '共笑®︎ライセンス・パートナーシップ ― 登録商標の正規提供と連携事業', labelEn: '共笑®︎ License & Partnership ― Official Trademark Licensing & Collaboration', href: '/license' },
       ],
     },
     {
@@ -114,7 +115,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, onNavigate, selectedLang, setSelect
                   {item.submenu && (
                     <>
                       {/* Dropdown menu */}
-                      <div className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 rounded-md shadow-lg border border-[#E6D5B8] ${item.id === 'act' ? 'w-48' : 'w-64'}`}>
+                      <div className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 rounded-md shadow-lg border border-[#E6D5B8] ${item.id === 'act' ? 'w-80' : 'w-64'}`}>
                         {/* Pointer arrow - diamond shape */}
                         {/* Outer diamond - beige border (1px thick like dropdown) */}
                         <div 

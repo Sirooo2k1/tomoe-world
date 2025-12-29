@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import Landing from './components/Landing'
 import Content from './components/Content'
 import InstagramFeed from './components/InstagramFeed'
 import Footer from './components/Footer'
+import img23Image from './Images/img_2_3.png'
 import Activities from './components/Activities'
 import Jyuku from './components/Jyuku'
 import Fund from './components/Fund'
+import License from './components/License'
 import Lectures from './components/Lectures'
 import DiversityLectures from './components/DiversityLectures'
 import HumanRightsLectures from './components/HumanRightsLectures'
@@ -24,7 +27,7 @@ function App() {
   useEffect(() => {
     const hashToPage = (hash) => {
       const key = hash.replace('#', '')
-      if (['home', 'act', 'lectures', 'jyuku', 'fund', 'div', 'hr', 'intl', 'sdgs', 'shop', 'ask'].includes(key)) {
+      if (['home', 'about', 'act', 'lectures', 'jyuku', 'fund', 'license', 'div', 'hr', 'intl', 'sdgs', 'shop', 'ask'].includes(key)) {
         return key
       }
       // legacy paths
@@ -60,8 +63,11 @@ function App() {
         setSelectedLang={setLanguage}
       />
       {activePage === 'home' && (
+        <Landing language={language} />
+      )}
+      {activePage === 'about' && (
         <>
-          <Hero language={language} />
+          <Hero language={language} heroImage={img23Image} />
           <main className="flex-grow">
             <Content language={language} />
             <InstagramFeed language={language} />
@@ -86,6 +92,11 @@ function App() {
       {activePage === 'fund' && (
         <main className="flex-grow">
           <Fund language={language} />
+        </main>
+      )}
+      {activePage === 'license' && (
+        <main className="flex-grow">
+          <License language={language} />
         </main>
       )}
       {activePage === 'div' && (

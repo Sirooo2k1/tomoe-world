@@ -14,14 +14,40 @@ const Activities = ({ language = 'ja' }) => {
           alt={t('共笑®︎活動', 'TOMOE Activities')}
           className="w-full h-auto object-contain block"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-overlay/20 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-overlay/20 to-black/40" />
         <div className="absolute inset-0 z-10 flex items-center justify-center">
-          <div className="text-center text-white px-4 max-w-4xl">
-            <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 drop-shadow-lg">
+          <div className="text-center px-4 max-w-4xl">
+            <h2 
+              className="text-5xl md:text-7xl font-display font-bold mb-4 cursor-pointer transition-all duration-500 hover:scale-110 hover:rotate-1"
+              style={{
+                background: 'linear-gradient(135deg, #ffffff 0%, #e0f2fe 25%, #fef3c7 50%, #e9d5ff 75%, #ffffff 100%)',
+                backgroundSize: '200% 200%',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 0 30px rgba(255,255,255,0.5), 0 4px 8px rgba(0,0,0,0.3)',
+                filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.3))',
+                animation: 'gradientShift 3s ease infinite',
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundPosition = '100% 50%'
+                e.target.style.filter = 'drop-shadow(0 0 20px rgba(255,255,255,0.8)) drop-shadow(0 0 40px rgba(147, 197, 253, 0.6))'
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundPosition = '0% 50%'
+                e.target.style.filter = 'drop-shadow(0 0 10px rgba(255,255,255,0.3))'
+              }}
+            >
               {t('共笑®︎活動', 'TOMOE Activities')}
             </h2>
           </div>
         </div>
+        <style>{`
+          @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+          }
+        `}</style>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">

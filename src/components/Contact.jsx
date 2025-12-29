@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import emailjs from '@emailjs/browser'
 import croppedMirrorlake from '../Images/cropped_mirrorlake.jpg'
 import logoTomoe02 from '../Images/Logo_tomoe_02.png'
 
@@ -13,6 +14,8 @@ const Contact = ({ language = 'ja' }) => {
     confirmed: false
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e) => {
     setFormData({
@@ -21,21 +24,59 @@ const Contact = ({ language = 'ja' }) => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    setIsSubmitted(true)
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
-      confirmed: false
-    })
+    setIsLoading(true)
+    setError('')
+    
+    // EmailJS configuration
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID'
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID'
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
+    
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject || t('お問い合わせ', 'Contact Inquiry'),
+        message: formData.message,
+        to_name: t('共笑®︎事務局', '共笑®︎ Office'),
+      }
+      
+      await emailjs.send(serviceId, templateId, templateParams, publicKey)
+      
+      setIsSubmitted(true)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+        confirmed: false
+      })
+    } catch (err) {
+      console.error('EmailJS Error:', err)
+      setError(t(
+        '送信に失敗しました。もう一度お試しください。',
+        'Failed to send message. Please try again.'
+      ))
+    } finally {
+      setIsLoading(false)
+    }
   }
+
+  // Automatically hide success message after 4 seconds
+  useEffect(() => {
+    if (isSubmitted) {
+      const timer = setTimeout(() => {
+        setIsSubmitted(false)
+      }, 4000) // 4 seconds
+
+      return () => clearTimeout(timer)
+    }
+  }, [isSubmitted])
+
   return (
     <>
       {/* Hero section */}
@@ -47,12 +88,38 @@ const Contact = ({ language = 'ja' }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-overlay/20 to-black/40" />
         <div className="absolute inset-0 z-10 flex items-center justify-center">
-          <div className="text-center text-white px-4 max-w-4xl">
-            <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 drop-shadow-lg">
+          <div className="text-center px-4 max-w-4xl">
+            <h2 
+              className="text-5xl md:text-7xl font-display font-bold mb-4 cursor-pointer transition-all duration-500 hover:scale-110 hover:rotate-1"
+              style={{
+                background: 'linear-gradient(135deg, #ffffff 0%, #e0f2fe 25%, #fef3c7 50%, #e9d5ff 75%, #ffffff 100%)',
+                backgroundSize: '200% 200%',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 0 30px rgba(255,255,255,0.5), 0 4px 8px rgba(0,0,0,0.3)',
+                filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.3))',
+                animation: 'gradientShift 3s ease infinite',
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundPosition = '100% 50%'
+                e.target.style.filter = 'drop-shadow(0 0 20px rgba(255,255,255,0.8)) drop-shadow(0 0 40px rgba(147, 197, 253, 0.6))'
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundPosition = '0% 50%'
+                e.target.style.filter = 'drop-shadow(0 0 10px rgba(255,255,255,0.3))'
+              }}
+            >
               {t('お問い合わせ', 'Contact')}
             </h2>
           </div>
         </div>
+        <style>{`
+          @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+          }
+        `}</style>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -164,19 +231,58 @@ const Contact = ({ language = 'ja' }) => {
                 <div className="flex justify-center pt-4">
                   <button
                     type="submit"
-                    className="px-8 py-3 rounded-lg text-black font-semibold shadow-md hover:shadow-lg transition-all duration-200"
+                    disabled={isLoading}
+                    className="px-8 py-3 rounded-lg text-black font-semibold shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                     style={{
                       background: 'linear-gradient(90deg, #fef3c7, #e9d5ff)',
                     }}
                   >
-                    {t('送信', 'Send')}
+                    {isLoading ? t('送信中...', 'Sending...') : t('送信', 'Send')}
                   </button>
                 </div>
+                {error && (
+                  <div className="mt-4 animate-fadeIn">
+                    <div className="bg-red-50 border-l-4 border-red-500 rounded-lg p-4 shadow-md">
+                      <div className="flex items-start">
+                        <div className="flex-shrink-0">
+                          <svg className="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <div className="ml-3">
+                          <p className="text-sm font-medium text-red-800">
+                            {error}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 {isSubmitted && (
-                  <div className="mt-4 text-center">
-                    <p className="text-black font-medium">
-                      {t('ありがとうございます。メッセージは送信されました。', 'Thank you. Your message has been sent.')}
-                    </p>
+                  <div className="mt-4 animate-fadeIn">
+                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-6 shadow-lg">
+                      <div className="flex flex-col items-center text-center">
+                        <div className="mb-4">
+                          <div className="relative">
+                            <div className="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-75"></div>
+                            <div className="relative bg-gradient-to-br from-green-400 to-emerald-500 rounded-full p-3 shadow-md">
+                              <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <h3 className="text-lg font-bold text-gray-800 mb-2">
+                          {t('送信完了', 'Message Sent Successfully')}
+                        </h3>
+                        <p className="text-gray-700 font-medium mb-1">
+                          {t('ありがとうございます。メッセージは送信されました。', 'Thank you. Your message has been sent.')}
+                        </p>
+                        <p className="text-sm text-gray-600 mt-2">
+                          {t('共笑®︎事務局より、できるだけ早くご返信いたします。', 'The 共笑®︎ office will reply as soon as possible.')}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 )}
               </form>

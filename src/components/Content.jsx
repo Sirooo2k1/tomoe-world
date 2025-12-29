@@ -33,27 +33,6 @@ const Content = ({ language = 'ja' }) => {
                   '　To build a sustainable and peaceful society, the way of thinking embodied in "共笑®︎" is necessary. This contributes to happiness and development at all levels—individual, family, friends, community, business, and nation.'
                 )}
               </p>
-              <p className="text-2xl md:text-3xl font-display font-bold text-headings">
-                {t('　共笑®︎', '　共笑®︎')}
-              </p>
-              <p className="text-xl md:text-2xl font-display font-bold text-headings">
-                {t(
-                  '共に楽しみ‘共楽’、共に学び‘共学’、共に育ち‘共育’、共に生き活かされ‘共活’、共に未来を創る‘共創’、そして共に笑う‘共笑®︎’',
-                  'Enjoying together (共楽), learning together (共学), growing together (共育), living and being enlivened together (共活), creating the future together (共創), and laughing together (共笑®︎).'
-                )}
-              </p>
-              <p>
-                {t(
-                  '　私たちは、『共笑®︎』社会の実現を目指して活動しています。この理念は、にしゃんた博士が提唱したもので、「共に生きるだけではなく、その質を高めることが重要である」とする考えに基づいています。具体的には、共に楽しむ「共楽」、共に学ぶ「共学」、共に育つ「共育」、共に生き活かされる「共活」、共に未来を創る「共創」、そして共に笑う『共笑®︎』という価値観を共有することで、より良い社会を築くことを目指しています。この理念に賛同するメンバーは、緩やかなネットワークを形成しながら活動を展開しています。',
-                  '　We are working to realize a "共笑®︎" society. This philosophy was proposed by Dr. Nishanta and is based on the idea that "it is important not just to live together, but to enhance the quality of that life." Specifically, by sharing the values of enjoying together (共楽), learning together (共学), growing together (共育), living and being enlivened together (共活), creating the future together (共創), and laughing together (共笑®︎), we aim to build a better society. Members who support this philosophy form a loose network and carry out activities together.'
-                )}
-              </p>
-              <p>
-                {t(
-                  '　私たちの主な活動内容には、『共笑®︎』の理念を広めるための講演会や研修会の開催、にしゃんた博士の講師派遣、ショップや塾、イベントの運営、『共笑®︎』の登録商標の管理・運営があります。また、それらの活動で得られた収益を活用した共笑®︎基金をベースにした国内外でのボランティア活動も積極的に行っています。',
-                  '　Our main activities include holding lectures and training sessions to spread the 共笑®︎ philosophy, dispatching Dr. Nishanta as a lecturer, operating the shop, school, and events, and managing and operating the 共笑®︎ registered trademark. We also actively engage in volunteer activities both domestically and internationally, based on the 共笑®︎ Fund, which utilizes the revenue generated from these activities.'
-                )}
-              </p>
             </div>
           </section>
           

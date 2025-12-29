@@ -21,12 +21,38 @@ const Lectures = ({ language = 'ja' }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-overlay/20 to-black/40" />
         <div className="absolute inset-0 z-10 flex items-center justify-center">
-          <div className="text-center text-white px-4 max-w-4xl">
-            <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 drop-shadow-lg">
+          <div className="text-center px-4 max-w-4xl">
+            <h2 
+              className="text-5xl md:text-7xl font-display font-bold mb-4 cursor-pointer transition-all duration-500 hover:scale-110 hover:rotate-1"
+              style={{
+                background: 'linear-gradient(135deg, #ffffff 0%, #e0f2fe 25%, #fef3c7 50%, #e9d5ff 75%, #ffffff 100%)',
+                backgroundSize: '200% 200%',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 0 30px rgba(255,255,255,0.5), 0 4px 8px rgba(0,0,0,0.3)',
+                filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.3))',
+                animation: 'gradientShift 3s ease infinite',
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundPosition = '100% 50%'
+                e.target.style.filter = 'drop-shadow(0 0 20px rgba(255,255,255,0.8)) drop-shadow(0 0 40px rgba(147, 197, 253, 0.6))'
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundPosition = '0% 50%'
+                e.target.style.filter = 'drop-shadow(0 0 10px rgba(255,255,255,0.3))'
+              }}
+            >
               {t('共笑®︎講演', '共笑®︎ Lectures')}
             </h2>
           </div>
         </div>
+        <style>{`
+          @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+          }
+        `}</style>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-14">
@@ -217,22 +243,22 @@ const Lectures = ({ language = 'ja' }) => {
                     {t('SDGs・サステナビリティの講演講師', 'SDGs & Sustainability Lecturer')}
                   </p>
                   <p className="indent-4 md:indent-6">
-                      {t(
+                    {t(
                         '　世の中で起きている"良いこと"と"よくないこと"は、"ちがい"との関わりによって説明できます。過去や現状に加えて、将来も"ちがい"との関わりを元に予測することが可能です。',
                         '　The "good things" and "not-so-good things" happening in the world can be explained by our relationship with "differences." In addition to the past and present, it is also possible to predict the future based on our relationship with "differences."'
-                      )}
+                    )}
                   </p>
                   <p className="indent-4 md:indent-6">
-                      {t(
+                    {t(
                         '　"共生"という言葉がありますが、私たちは否応なく"ちがい"と共生していることに気づく必要があります。ただ単に共に生きるだけでは不十分です。"ちがい"との共生を自然の成り行きに任せると、数の論理などの力学により、望ましい結果が得られないことが多いのです。実際、世界で起きている戦争、環境問題、営業不振、夫婦喧嘩といったすべての社会問題は、"ちがい"との関わりを自然に任せた結果といえます。',
                         '　There is the word "coexistence," but we need to realize that we inevitably coexist with "differences." Simply living together is not sufficient. If we leave coexistence with "differences" to the natural course of events, the dynamics such as the logic of numbers often prevent us from obtaining desirable results. In fact, all social problems such as wars occurring in the world, environmental issues, business downturns, and marital quarrels can be said to be the result of leaving our relationship with "differences" to nature.'
-                      )}
+                    )}
                   </p>
                   <p className="indent-4 md:indent-6">
-                      {t(
+                    {t(
                         '　理想的な共生を目指すことが重要です。"ちがい"同士が共に楽しみ（共楽）、共に学び（共学）、共に成長し（共育）、共に活かされ（共活）、共に笑う（共笑®︎）ことが必要です。私が考案した"共笑®︎"（ともえ）という概念は、一人ひとり、そしてどんな組織や社会、国家においても、永続的な平和、持続可能性、発展を追求するための唯一無二の方法であると信じています。',
                         '　It is important to aim for ideal coexistence. It is necessary for "differences" to enjoy together (共楽), learn together (共学), grow together (共育), live and be enlivened together (共活), and laugh together (共笑®︎). I believe that the concept of "共笑®︎" (Tomoe) that I devised is the one and only method for each individual, and for any organization, society, or nation, to pursue lasting peace, sustainability, and development.'
-                      )}
+                    )}
                   </p>
                 <div className="flex justify-center">
                   <a
