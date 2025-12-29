@@ -101,8 +101,8 @@ function App() {
       window.history.pushState(null, '', newPath)
     }
     
-    // Always scroll to top when changing page
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    // Always scroll to top when changing page (instant, no smooth animation)
+    window.scrollTo({ top: 0, behavior: 'auto' })
   }, [activePage])
 
   return (
