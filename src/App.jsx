@@ -23,8 +23,36 @@ function App() {
   const [activePage, setActivePage] = useState('home')
   const [language, setLanguage] = useState('ja')
 
-  // Map hash -> page id
+  // Map path/hash -> page id
   useEffect(() => {
+    const pathToPage = (path) => {
+      const cleanPath = path.replace(/^\/+|\/+$/g, '') // Remove leading/trailing slashes
+      if (!cleanPath || cleanPath === '') return 'home'
+      
+      // Map URL paths to page ids
+      const pathMap = {
+        'about': 'about',
+        'act': 'act',
+        'activities': 'act',
+        'lectures': 'lectures',
+        'jyuku': 'jyuku',
+        'fund': 'fund',
+        'license': 'license',
+        'div': 'div',
+        'diversity': 'div',
+        'hr': 'hr',
+        'human-rights': 'hr',
+        'intl': 'intl',
+        'international': 'intl',
+        'tabun': 'intl',
+        'sdgs': 'sdgs',
+        'shop': 'shop',
+        'ask': 'ask',
+        'contact': 'ask'
+      }
+      return pathMap[cleanPath] || null
+    }
+    
     const hashToPage = (hash) => {
       const key = hash.replace('#', '')
       if (['home', 'about', 'act', 'lectures', 'jyuku', 'fund', 'license', 'div', 'hr', 'intl', 'sdgs', 'shop', 'ask'].includes(key)) {
@@ -34,21 +62,45 @@ function App() {
       if (key === 'tabun') return 'intl'
       return null
     }
-    const applyHash = () => {
-      const page = hashToPage(window.location.hash)
-      if (page) setActivePage(page)
+    
+    const applyRoute = () => {
+      // Priority: URL path > hash
+      const pathPage = pathToPage(window.location.pathname)
+      const hashPage = hashToPage(window.location.hash)
+      
+      const page = pathPage || hashPage || 'home'
+      if (page) {
+        setActivePage(page)
+        // Update URL to use path instead of hash (if path is available)
+        if (pathPage && window.location.pathname !== `/${page}` && page !== 'home') {
+          window.history.replaceState(null, '', `/${page}`)
+        } else if (!pathPage && hashPage && window.location.hash !== `#${hashPage}`) {
+          // Keep hash for backward compatibility
+          window.location.hash = `#${hashPage}`
+        }
+      }
     }
-    applyHash()
-    window.addEventListener('hashchange', applyHash)
-    return () => window.removeEventListener('hashchange', applyHash)
+    
+    applyRoute()
+    window.addEventListener('popstate', applyRoute)
+    window.addEventListener('hashchange', applyRoute)
+    return () => {
+      window.removeEventListener('popstate', applyRoute)
+      window.removeEventListener('hashchange', applyRoute)
+    }
   }, [])
 
-  // Sync hash when activePage changes
+  // Sync URL when activePage changes (use path instead of hash)
   useEffect(() => {
-    const nextHash = activePage === 'home' ? '' : `#${activePage}`
-    if (window.location.hash !== nextHash) {
-      window.location.hash = nextHash
+    const currentPath = window.location.pathname.replace(/^\/+|\/+$/g, '')
+    const expectedPath = activePage === 'home' ? '' : activePage
+    
+    // Only update if path doesn't match
+    if (currentPath !== expectedPath) {
+      const newPath = activePage === 'home' ? '/' : `/${activePage}`
+      window.history.pushState(null, '', newPath)
     }
+    
     // Always scroll to top when changing page
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [activePage])
@@ -63,7 +115,7 @@ function App() {
         setSelectedLang={setLanguage}
       />
       {activePage === 'home' && (
-        <Landing language={language} />
+        <Landing language={language} onNavigate={setActivePage} />
       )}
       {activePage === 'about' && (
         <>

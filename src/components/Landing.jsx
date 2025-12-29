@@ -1,8 +1,17 @@
 import React from 'react'
 import Hero from './Hero'
 
-const Landing = ({ language = 'ja' }) => {
+const Landing = ({ language = 'ja', onNavigate }) => {
   const t = (ja, en) => (language === 'en' ? en : ja)
+  
+  const handleLinkClick = (e, pageId) => {
+    e.preventDefault()
+    if (onNavigate) {
+      onNavigate(pageId)
+    } else {
+      window.location.href = `/${pageId}`
+    }
+  }
   return (
     <>
       <Hero language={language} />
@@ -68,7 +77,8 @@ const Landing = ({ language = 'ja' }) => {
                 </p>
                 <div className="mt-6">
                   <a
-                    href="https://tomoeworld.com/license"
+                    href="/license"
+                    onClick={(e) => handleLinkClick(e, 'license')}
                     className="inline-flex items-center gap-2 px-8 py-3 rounded-full text-black font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-200"
                     style={{
                       background: 'linear-gradient(90deg, #fef3c7, #e9d5ff)',
