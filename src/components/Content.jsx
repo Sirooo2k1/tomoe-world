@@ -51,13 +51,13 @@ const Content = ({ language = 'ja' }) => {
           
           {/* Section: Logo nishantomodiver */}
           <section className="mt-8 mb-8">
-            <h1 className="mb-6">
-              <img
-                src={nishantomodiverImage}
-                alt={t('共楽・共学・共育・共笑®︎｜共に楽しみ、学び、育ち、共に笑おう', '共楽・共学・共育・共笑®︎ | Let\'s enjoy, learn, grow, and laugh together')}
-                className="w-full h-auto max-w-full"
-              />
-            </h1>
+          <h1 className="mb-6">
+            <img
+              src={nishantomodiverImage}
+              alt={t('共楽・共学・共育・共笑®︎｜共に楽しみ、学び、育ち、共に笑おう', '共楽・共学・共育・共笑®︎ | Let\'s enjoy, learn, grow, and laugh together')}
+              className="w-full h-auto max-w-full"
+            />
+          </h1>
           </section>
           
           {/* Section: にしゃんた博士の紹介 */}

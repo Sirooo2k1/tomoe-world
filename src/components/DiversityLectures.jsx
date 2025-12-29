@@ -162,8 +162,8 @@ const DiversityLectures = ({ language = 'ja' }) => {
               </p>
               <p className="indent-4 md:indent-6" dangerouslySetInnerHTML={{
                 __html: t(
-                  '　「違いを力に変え、未来を創る」講演で、職場や地域に笑顔と共感の輪を広げませんか？講演依頼やお問い合わせは、<a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">共笑®︎事務局</a>までお気軽にご連絡ください。一緒に、違いを活かす未来を目指しましょう！',
-                  '　Would you like to spread the circle of smiles and empathy in workplaces and communities with a lecture on "turning differences into strength to create the future"? For lecture requests or inquiries, please feel free to contact the <a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">共笑®︎ office</a>. Let\'s aim together for a future that leverages differences!'
+                  '　「違いを力に変え、未来を創る」講演で、職場や地域に笑顔と共感の輪を広げませんか？講演依頼やお問い合わせは、<a href="https://tomoeworld.com/ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">共笑®︎事務局</a>までお気軽にご連絡ください。一緒に、違いを活かす未来を目指しましょう！',
+                  '　Would you like to spread the circle of smiles and empathy in workplaces and communities with a lecture on "turning differences into strength to create the future"? For lecture requests or inquiries, please feel free to contact the <a href="https://tomoeworld.com/ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">共笑®︎ office</a>. Let\'s aim together for a future that leverages differences!'
                 )
               }} />
             </div>
@@ -205,15 +205,15 @@ const DiversityLectures = ({ language = 'ja' }) => {
                   </p>
                   <p className="text-gray-700" dangerouslySetInnerHTML={{
                     __html: t(
-                      '要相談。<a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">事務局</a>にお問い合わせください。',
-                      'Please inquire with the <a href="https://tomoeworld.vercel.app/#ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">office</a>.'
+                      '要相談。<a href="https://tomoeworld.com/ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">事務局</a>にお問い合わせください。',
+                      'Please inquire with the <a href="https://tomoeworld.com/ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">office</a>.'
                     )
                   }} />
                 </div>
               </div>
               <div className="flex justify-center pt-4">
                 <a
-                  href="https://tomoeworld.vercel.app/#ask"
+                  href="https://tomoeworld.com/ask"
                   className="inline-flex items-center gap-2 px-8 py-3 rounded-full text-white font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-200"
                   style={{
                     background: 'linear-gradient(90deg, #00d4ff, #833ab4)',

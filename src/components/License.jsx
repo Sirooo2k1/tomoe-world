@@ -329,7 +329,7 @@ const License = ({ language = 'ja' }) => {
             </div>
             <div className="flex justify-center mt-6">
               <a
-                href="https://tomoeworld.vercel.app/#ask"
+                href="https://tomoeworld.com/ask"
                 className="inline-flex items-center gap-2 px-8 py-3 rounded-full text-black font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-200"
                 style={{
                   background: 'linear-gradient(90deg, #fef3c7, #e9d5ff)',
