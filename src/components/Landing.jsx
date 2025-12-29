@@ -64,26 +64,26 @@ const Landing = ({ language = 'ja', onNavigate }) => {
               </p>
             </div>
 
-            <div className="mt-16 text-center">
-              <div className="inline-block bg-[#FAF8F0] rounded-2xl p-8 shadow-md border-2 border-[#F5F1E8] max-w-2xl">
-                <p className="text-2xl md:text-3xl font-display font-bold text-headings mb-4">
+            <div className="mt-12 md:mt-16 text-center">
+              <div className="w-full md:inline-block bg-[#FAF8F0] rounded-xl md:rounded-2xl p-5 md:p-8 shadow-md border-2 border-[#F5F1E8] max-w-2xl mx-auto">
+                <p className="text-xl md:text-3xl font-display font-bold text-headings mb-3 md:mb-4">
                   {t('PARTNERSHIP', 'PARTNERSHIP')}
                 </p>
-                <p className="text-xl md:text-2xl text-headings">
+                <p className="text-base md:text-2xl text-headings leading-relaxed px-2 md:px-0">
                   {t(
                     '共笑®︎ライセンス・パートナーシップ ― 登録商標の正規提供と連携事業',
                     '共笑®︎ License & Partnership ― Official Trademark Licensing & Collaboration'
                   )}
                 </p>
-                <div className="mt-6">
+                <div className="mt-5 md:mt-6">
                   <a
                     href="/license"
                     onClick={(e) => handleLinkClick(e, 'license')}
-                    className="inline-flex items-center gap-2 px-8 py-3 rounded-full text-black font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-200"
+                    className="inline-flex items-center gap-2 px-6 md:px-8 py-2.5 md:py-3 rounded-full text-black font-semibold text-sm md:text-base shadow-lg hover:shadow-xl transition-all duration-200 w-full md:w-auto justify-center"
                     style={{
                       background: 'linear-gradient(90deg, #fef3c7, #e9d5ff)',
-                      minWidth: '250px',
-                      justifyContent: 'center'
+                      maxWidth: '100%',
+                      minWidth: 'auto'
                     }}
                   >
                     {t('詳しく見る', 'Learn More')}
