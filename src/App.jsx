@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Landing from './components/Landing'
-import Content from './components/Content'
-import InstagramFeed from './components/InstagramFeed'
 import Footer from './components/Footer'
 import img23Image from './Images/img_2_3.png'
 import Activities from './components/Activities'
@@ -17,6 +15,12 @@ import InternationalLectures from './components/InternationalLectures'
 import SDGsLectures from './components/SDGsLectures'
 import Shop from './components/Shop'
 import Contact from './components/Contact'
+import Homebase from './components/Homebase'
+import Crew from './components/Crew'
+import Health from './components/Health'
+import Learning from './components/Learning'
+import Organization from './components/Organization'
+import Blog from './components/Blog'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -31,7 +35,7 @@ function App() {
       
       // Map URL paths to page ids
       const pathMap = {
-        'about': 'about',
+        'homebase': 'homebase',
         'act': 'act',
         'activities': 'act',
         'lectures': 'lectures',
@@ -47,6 +51,11 @@ function App() {
         'tabun': 'intl',
         'sdgs': 'sdgs',
         'shop': 'shop',
+        'crew': 'crew',
+        'health': 'health',
+        'learning': 'learning',
+        'organization': 'organization',
+        'blog': 'blog',
         'ask': 'ask',
         'contact': 'ask'
       }
@@ -55,7 +64,7 @@ function App() {
     
     const hashToPage = (hash) => {
       const key = hash.replace('#', '')
-      if (['home', 'about', 'act', 'lectures', 'jyuku', 'fund', 'license', 'div', 'hr', 'intl', 'sdgs', 'shop', 'ask'].includes(key)) {
+      if (['home', 'homebase', 'act', 'lectures', 'jyuku', 'fund', 'license', 'div', 'hr', 'intl', 'sdgs', 'shop', 'crew', 'health', 'learning', 'organization', 'blog', 'ask'].includes(key)) {
         return key
       }
       // legacy paths
@@ -117,14 +126,8 @@ function App() {
       {activePage === 'home' && (
         <Landing language={language} onNavigate={setActivePage} />
       )}
-      {activePage === 'about' && (
-        <>
-          <Hero language={language} heroImage={img23Image} />
-          <main className="flex-grow">
-            <Content language={language} />
-            <InstagramFeed language={language} />
-          </main>
-        </>
+      {activePage === 'homebase' && (
+        <Homebase language={language} />
       )}
       {activePage === 'act' && (
         <main className="flex-grow">
@@ -174,6 +177,31 @@ function App() {
       {activePage === 'shop' && (
         <main className="flex-grow">
           <Shop language={language} />
+        </main>
+      )}
+      {activePage === 'crew' && (
+        <main className="flex-grow">
+          <Crew language={language} />
+        </main>
+      )}
+      {activePage === 'health' && (
+        <main className="flex-grow">
+          <Health language={language} onNavigate={setActivePage} />
+        </main>
+      )}
+      {activePage === 'learning' && (
+        <main className="flex-grow">
+          <Learning language={language} />
+        </main>
+      )}
+      {activePage === 'organization' && (
+        <main className="flex-grow">
+          <Organization language={language} onNavigate={setActivePage} />
+        </main>
+      )}
+      {activePage === 'blog' && (
+        <main className="flex-grow">
+          <Blog language={language} />
         </main>
       )}
       {activePage === 'ask' && (

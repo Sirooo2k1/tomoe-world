@@ -75,6 +75,36 @@ const Activities = ({ language = 'ja' }) => {
           <p className="text-2xl md:text-3xl font-display font-bold text-headings">
             {t('共笑®︎活動の主な取り組み', 'Main 共笑®︎ Activities')}
           </p>
+          
+          {/* 共笑®︎ホーム（ベース）Section */}
+          <div className="mb-6 space-y-4">
+            <p className="text-xl font-bold text-headings">
+              {t('共笑®︎ホーム（ベース）', '共笑®︎ Home (Base)')}
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              {t(
+                '「共笑®︎ホーム」は、Office KANDYが運営する完全予約制・会員制の多機能型拠点です。ここは、カフェであり、学び舎であり、スタジオであり、相談室。そして企業の戦略基地でもあります。',
+                '"共笑®︎ Home" is a fully reserved, membership-based multifunctional base operated by Office KANDY. It is a cafe, a learning space, a studio, a consultation room, and also a strategic base for companies.'
+              )}
+            </p>
+            <div className="flex justify-start pt-2">
+              <a
+                href="/homebase"
+                onClick={(e) => {
+                  e.preventDefault()
+                  window.location.href = '/homebase'
+                  window.scrollTo({ top: 0, behavior: 'auto' })
+                }}
+                className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+              >
+                {t('JUMP', 'JUMP')}
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
           <div className="space-y-6">
             <div className="space-y-1">
               <p className="text-xl font-bold text-headings">
@@ -122,6 +152,17 @@ const Activities = ({ language = 'ja' }) => {
             </div>
             <div className="space-y-1">
               <p className="text-xl font-bold text-headings">
+                {t('共笑®︎ボランティア　｜　共笑®︎献血キャンペーン', '共笑®︎ Volunteer ｜ 共笑®︎ Blood Donation Campaign')}
+              </p>
+              <p>
+                {t(
+                  '社会貢献活動として、ボランティア活動や献血キャンペーンを積極的に推進しています。地域社会への貢献を通じて、共笑®︎の理念を実践しています。',
+                  'As social contribution activities, we actively promote volunteer activities and blood donation campaigns. Through contributions to local communities, we practice the philosophy of 共笑®︎.'
+                )}
+              </p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-xl font-bold text-headings">
                 {t('共笑®︎基金', '共笑®︎ Fund')}
               </p>
               <p>
@@ -132,6 +173,7 @@ const Activities = ({ language = 'ja' }) => {
               </p>
             </div>
           </div>
+          <hr className="border-t border-gray-300 my-8 max-w-2xl mx-auto" />
           <div className="space-y-3">
             <p className="text-xl font-bold text-headings">
               {t('共笑®︎活動が目指す未来', 'The Future 共笑®︎ Activities Aim For')}

@@ -108,8 +108,8 @@ const Fund = ({ language = 'ja' }) => {
             </p>
             <p dangerouslySetInnerHTML={{
               __html: t(
-                '✧ 寄付に関するお問い合わせページへ：<a href="https://tomoeworld.com/ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">https://tomoe-world.com/ask</a>',
-                '✧ For donation inquiries: <a href="https://tomoeworld.com/ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">https://tomoe-world.com/ask</a>'
+                '✧ 寄付に関するお問い合わせページへ：<a href="https://tomoeworld.com/ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">https://tomoeworld.com/ask</a>',
+                '✧ For donation inquiries: <a href="https://tomoeworld.com/ask" target="_blank" rel="noopener noreferrer" style="color: #c59a53; text-decoration: underline;" onmouseover="this.style.color=\'#a87f3d\'" onmouseout="this.style.color=\'#c59a53\'">https://tomoeworld.com/ask</a>'
               )
             }} />
             <p>

@@ -1,11 +1,13 @@
 import React from 'react'
 import lecturesHeroImage from '../Images/img_07.png'
 import nishantaImage from '../Images/nishanta_img.jpg'
+import nishantaImgPng from '../Images/nishanta_img.png'
 import nishantaExtraImage from '../Images/img_nishanta01-2048x975.png'
 import nishantaExtraImage2 from '../Images/img_nishanta_02-2048x1365.jpg'
 import nishantaExtraImage3 from '../Images/img_nishanta_03-2048x1324.jpg'
 import nishantaExtraImage4 from '../Images/img_nishanta_04-1024x683-1.jpg'
 import nishantaExtraImage5 from '../Images/img_nishanta_05-2048x1536.jpg'
+import nishantomodiverImage from '../Images/nishantomodiver.png'
 import logoTomoe02 from '../Images/Logo_tomoe_02.png'
 
 const Lectures = ({ language = 'ja' }) => {
@@ -120,13 +122,14 @@ const Lectures = ({ language = 'ja' }) => {
                     '　His storytelling is filled with humor, warmth, and deep insight, creating not just a lecture to listen to, but a "place of awareness" that fosters empathy and encourages action.'
                   )}
               </p>
-              <div className="space-y-2">
+              <div className="bg-[#FAF8F0] rounded-xl md:rounded-2xl p-5 md:p-6 shadow-md border-2 border-[#F5F1E8] mb-6">
+                <div className="space-y-2">
                   <p className="text-xl md:text-2xl font-display font-bold text-headings">
                     {t('主な登壇実績', 'Selected Engagements')}
                   </p>
                   <ul className="list-disc pl-5 space-y-1">
                     <li>
-                      {t('文化庁「日本語教育研究会」', 'Agency for Cultural Affairs “Japanese Language Education Study Group”')}
+                      {t('文化庁「日本語教育研究会」', 'Agency for Cultural Affairs "Japanese Language Education Study Group"')}
                     </li>
                     <li>
                       {t('全国の教育委員会主催「人権を考える市民講座」など', 'Citizen lectures on human rights hosted by boards of education nationwide')}
@@ -144,8 +147,10 @@ const Lectures = ({ language = 'ja' }) => {
                       {t('近畿同朋運動推進協議会 記念講演', 'Memorial lecture for the Kinki Dobo Movement Promotion Council')}
                     </li>
                   </ul>
+                </div>
               </div>
-              <div className="space-y-2">
+              <div className="bg-[#FAF8F0] rounded-xl md:rounded-2xl p-5 md:p-6 shadow-md border-2 border-[#F5F1E8] mb-6">
+                <div className="space-y-2">
                   <p className="text-xl md:text-2xl font-display font-bold text-headings">
                     {t('対象者と場面', 'Audiences & Settings')}
                   </p>
@@ -156,6 +161,7 @@ const Lectures = ({ language = 'ja' }) => {
                     <li>{t('自治体（人権週間、国際理解週間）', 'Municipalities (human-rights week, international-understanding week)')}</li>
                     <li>{t('地域NPO、市民フォーラム、宗教系の集い など', 'Local NPOs, citizen forums, faith-based gatherings, etc.')}</li>
                   </ul>
+                </div>
               </div>
               <div className="mt-8 rounded-[32px] shadow-lg overflow-hidden bg-[#F5F1E8] border-2 border-[#F5F1E8]">
                 <img
@@ -344,6 +350,65 @@ const Lectures = ({ language = 'ja' }) => {
                         '✧Q: Can you accommodate high school and university students?<br />A: Yes. We flexibly adjust to age and expertise. Making it our motto to be inclusive, we can accommodate any type of audience.'
                       )
                     }} />
+                  <div className="mt-16 md:mt-20 mb-6 flex justify-center">
+                    <div className="w-full max-w-4xl">
+                      <img
+                        src={nishantomodiverImage}
+                        alt={t('にしゃんた', 'Nishanta')}
+                        className="w-full h-auto"
+                        style={{
+                          mixBlendMode: 'multiply',
+                          filter: 'contrast(1.1)',
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <section className="mt-10 space-y-4">
+                    <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                        <div className="flex-1">
+                          <div className="space-y-4 text-gray-700 leading-relaxed">
+                            <p className="indent-4 md:indent-6 break-words hyphens-auto" style={{ wordBreak: 'break-word', lineHeight: '1.8' }}>
+                              {t(
+                                '　英連邦自治領セイロン出身。1987年、17歳でボーイスカウト集いに初来日。一年後、父が家を担保に借りた7万円と片道切符で再来日し、留学開始。日本語能力試験1級合格。新聞奨学生として大学生活を送り、空手四段や公認指導員・審判員資格を取得。弁論大会で多数優勝し、「スピコン荒らし」とあだ名される。',
+                                '　Born in the Commonwealth Dominion of Ceylon. First came to Japan in 1987 at age 17 for a Boy Scout gathering. Returned a year later with 70,000 yen (borrowed by his father against their house) and a one-way ticket to begin studying abroad. Passed the Japanese Language Proficiency Test Level 1. Lived as a newspaper scholarship student while obtaining 4th dan in karate and certified instructor/referee qualifications. Won numerous speech contests and was nicknamed "Supikon Arashi" (Speech Contest Storm).'
+                              )}
+                            </p>
+                            <p className="indent-4 md:indent-6 break-words hyphens-auto" style={{ wordBreak: 'break-word', lineHeight: '1.8' }}>
+                              {t(
+                                '　立命館大学経営学部を学部総代で卒業。名城大学大学院や龍谷大学大学院で学び、経済学や商学修士号と経済学博士号を取得。日本国籍を取得。タレントとして映画『地球のヘソ』主演、落語家としても注目され、テレビ番組で人気に。',
+                                '　Graduated as valedictorian from Ritsumeikan University\'s College of Business Administration. Studied at Meijo University Graduate School and Ryukoku University Graduate School, earning master\'s degrees in economics and commerce, as well as a doctorate in economics. Acquired Japanese nationality. Starred in the movie "Chikyu no Heso" (The Earth\'s Navel) as a talent, and gained attention as a rakugo performer, becoming popular on television programs.'
+                              )}
+                            </p>
+                            <p className="indent-4 md:indent-6 break-words hyphens-auto" style={{ wordBreak: 'break-word', lineHeight: '1.8' }}>
+                              {t(
+                                '　大学教授、タレント、随筆家、講演家、僧侶、空手家など多様な顔を持ち"ミスター・ダイバーシティ"とも称される人物である。現在は羽衣国際大学教授を務める傍ら、テレビ・ラジオ出演、出版、ウェブニュース執筆など多方面で活躍。「ダイバーシティ」「国際理解・国際交流」「多文化共生」「人権・平和」「SDGs」などをテーマに講演や研修を行い高評を得ている。ボランティア活動として、教え子たちと日本赤十字社のと連携しイベントを毎年開催。　',
+                                '　A person with diverse roles including university professor, talent, essayist, lecturer, monk, and karateka, also known as "Mr. Diversity." Currently serves as a professor at Hagoromo International University while being active in various fields such as TV/radio appearances, publishing, and writing for web news. Conducts highly-rated lectures and training sessions on themes like "Diversity," "International Understanding/International Exchange," "Multicultural Coexistence," "Human Rights/Peace," and "SDGs." As a volunteer activity, organizes annual events in collaboration with students and the Japanese Red Cross Society.'
+                              )}
+                            </p>
+                          </div>
+                          <div className="flex justify-center mt-6">
+                            <a
+                              href="https://nishan.jp/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center justify-center gap-0.5 px-6 py-3 rounded-full text-black font-display font-semibold text-base md:text-lg whitespace-nowrap shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105"
+                              style={{
+                                background: 'linear-gradient(to right, #fef3c7, #e9d5ff)',
+                              }}
+                            >
+                              <span>{t('にしゃんた Official Web', 'Nishanta Official Web —')}</span>
+                            </a>
+                          </div>
+                        </div>
+                        <div className="flex-shrink-0 w-full md:w-80 lg:w-96 flex justify-center md:justify-end">
+                          <img
+                            src={nishantaImgPng}
+                            alt={t('にしゃんた', 'Nishanta')}
+                            className="w-full max-w-xs md:max-w-none h-auto object-contain rounded-lg"
+                          />
+                        </div>
+                      </div>
+                  </section>
                   <div className="flex justify-center pt-6">
                     <img
                       src={logoTomoe02}

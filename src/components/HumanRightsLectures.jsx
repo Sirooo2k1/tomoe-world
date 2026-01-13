@@ -1,5 +1,5 @@
 import React from 'react'
-import lecturesHeroImage from '../Images/img_08.png'
+import img23Image from '../Images/img_2_3.png'
 import nishantaImage03 from '../Images/nishanta_img03.jpg'
 import logoTomoe02 from '../Images/Logo_tomoe_02.png'
 
@@ -10,7 +10,7 @@ const HumanRightsLectures = ({ language = 'ja' }) => {
       {/* Hero section */}
       <div className="relative w-full overflow-hidden bg-black">
         <img
-          src={lecturesHeroImage}
+          src={img23Image}
           alt={t('人権と平和の講演講師', 'Human Rights & Peace Lecturer')}
           className="w-full h-auto object-contain block"
         />
@@ -308,12 +308,29 @@ const HumanRightsLectures = ({ language = 'ja' }) => {
                 className="w-28 h-28 object-contain"
               />
             </div>
-            <p className="text-sm text-headings text-center">
-              {t('※ 当ウェブサイトの文言および写真の無断使用は固く禁じております。', 'Unauthorized use of text or photos on this site is strictly prohibited.')}
-            </p>
-            <p className="text-sm text-headings text-center mt-2">
-              {t('※ 共笑®︎は、Office KANDY, Inc.の登録商標です。無断での利用はお断りします。', '共笑®︎ is a registered trademark of Office KANDY, Inc. Unauthorized use is not permitted.')}
-            </p>
+            <div className="mt-10 md:mt-12 flex justify-center">
+              <div className="bg-red-50 border-2 border-red-200 rounded-xl md:rounded-lg p-4 md:p-5 max-w-2xl w-full">
+                <div className="text-center mb-3">
+                  <div className="flex items-center justify-center gap-2 mb-1">
+                    <span className="text-lg md:text-xl">⚠️</span>
+                    <h3 className="text-sm md:text-base font-display font-bold text-red-800 leading-tight">
+                      {t('【重要】登録商標「共笑®︎」の使用に関する注意書き', '【Important】Notice Regarding Use of Registered Trademark "共笑®︎"')}
+                    </h3>
+                  </div>
+                </div>
+                <div className="text-left mt-3">
+                  <p className="text-sm md:text-base font-semibold text-gray-800 mb-1.5">
+                    {t('注意書き：商標権について', 'Notice: Regarding Trademark Rights')}
+                  </p>
+                  <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                    {t(
+                      '「共笑®︎」は、Office KANDYの登録商標です。 当社の許可なく、本商標を無断で使用（複製、転用、販売等）することは、商標法違反にあたりますので、お控えください。',
+                      '"共笑®︎" is a registered trademark of Office KANDY. Unauthorized use of this trademark (reproduction, transfer, sale, etc.) without our permission constitutes a violation of trademark law, so please refrain from doing so.'
+                    )}
+                  </p>
+                </div>
+              </div>
+            </div>
           </section>
         </article>
       </div>
