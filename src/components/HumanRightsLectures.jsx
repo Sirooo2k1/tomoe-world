@@ -321,13 +321,13 @@ const HumanRightsLectures = ({ language = 'ja' }) => {
                 <div className="text-left mt-3">
                   <p className="text-sm md:text-base font-semibold text-gray-800 mb-1.5">
                     {t('注意書き：商標権について', 'Notice: Regarding Trademark Rights')}
-                  </p>
+            </p>
                   <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                     {t(
                       '「共笑®︎」は、Office KANDYの登録商標です。 当社の許可なく、本商標を無断で使用（複製、転用、販売等）することは、商標法違反にあたりますので、お控えください。',
                       '"共笑®︎" is a registered trademark of Office KANDY. Unauthorized use of this trademark (reproduction, transfer, sale, etc.) without our permission constitutes a violation of trademark law, so please refrain from doing so.'
                     )}
-                  </p>
+            </p>
                 </div>
               </div>
             </div>

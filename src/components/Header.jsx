@@ -25,26 +25,33 @@ const Header = ({ isMenuOpen, setIsMenuOpen, onNavigate, selectedLang, setSelect
         { id: 'learning', labelJa: '共笑® 学びとあんしんサポート', labelEn: '共笑® Learning and Peace of Mind Support', href: '/learning' },
         { id: 'health', labelJa: '共笑® からだ・健康・きれい相談室', labelEn: '共笑® Body, Health, Beauty Consultation Room', href: '/health' },
         { id: 'organization', labelJa: '共笑® みんなの活躍・組織サポート', labelEn: '共笑® Everyone\'s Activity / Organization Support', href: '/organization' },
-        {
-          id: 'lectures',
-          labelJa: '共笑®︎講演',
-          labelEn: 'Lectures',
-          href: '/lectures',
+    {
+      id: 'lectures',
+      labelJa: '共笑®︎講演',
+      labelEn: 'Lectures',
+      href: '/lectures',
           nestedSubmenu: [
-            { id: 'div', labelJa: 'ダイバーシティ講演講師', labelEn: 'Diversity Lectures', href: '/lectures/div' },
-            { id: 'hr', labelJa: '人権と平和の講演講師', labelEn: 'Human Rights & Peace', href: '/hr' },
-            { id: 'intl', labelJa: '多文化共生・国際理解の講演講師', labelEn: 'Multicultural & International', href: '/tabun' },
-            { id: 'sdgs', labelJa: 'SDGs・サステナビリティの講演講師', labelEn: 'SDGs & Sustainability', href: '/sdgs' },
-            { id: 'jyuku', labelJa: '共笑®︎塾', labelEn: 'Tomoe Jyuku', href: '/jyuku' },
-          ],
-        },
-        { id: 'shop', labelJa: '共笑®︎SHOP', labelEn: 'Tomoe SHOP', href: '/shop' },
-        { id: 'fund', labelJa: '共笑®︎基金', labelEn: 'Tomoe Fund', href: '/fund' },
-        { id: 'blog', labelJa: '共笑®︎ブログ', labelEn: 'Tomoe Blog', href: '/blog' },
+        { id: 'div', labelJa: 'ダイバーシティ講演講師', labelEn: 'Diversity Lecture Speaker', href: '/lectures/div' },
+        { id: 'hr', labelJa: '人権と平和の講演講師', labelEn: 'Human Rights & Peace Lecturer', href: '/hr' },
+        { id: 'intl', labelJa: '多文化共生・国際理解の講演講師', labelEn: 'Multicultural & International Understanding Lecturer', href: '/tabun' },
+        { id: 'sdgs', labelJa: 'SDGs・サステナビリティの講演講師', labelEn: 'SDGs & Sustainability Lecturer', href: '/sdgs' },
+            { id: 'jyuku', labelJa: '共笑®︎塾', labelEn: '共笑®︎ Jyuku', href: '/jyuku' },
       ],
     },
-    { id: 'license', labelJa: '共笑®︎ライセンス連携事業', labelEn: '共笑®︎ License Partnership Business', href: '/license' },
-    { id: 'crew', labelJa: '共笑®︎クルー', labelEn: 'Tomoe Crew', href: '/crew' },
+    { id: 'shop', labelJa: '共笑®︎SHOP', labelEn: '共笑®︎ SHOP', href: '/shop' },
+        { id: 'fund', labelJa: '共笑®︎基金', labelEn: '共笑®︎ Fund', href: '/fund' },
+      ],
+    },
+    { id: 'blog', labelJa: '共笑®︎ブログ', labelEn: '共笑®︎ Blog', href: '/blog' },
+    {
+      id: 'crew',
+      labelJa: '共笑®︎クルー',
+      labelEn: '共笑®︎ Crew',
+      href: '/crew',
+      submenu: [
+        { id: 'license', labelJa: 'ライセンス連携事業について', labelEn: 'About License Partnership Business', href: '/license' },
+      ],
+    },
     { id: 'ask', labelJa: 'お問い合わせ', labelEn: 'Contact', href: '/ask' },
   ]
   const getLabel = (item) => (selectedLang === 'en' ? item.labelEn : item.labelJa)
@@ -93,12 +100,12 @@ const Header = ({ isMenuOpen, setIsMenuOpen, onNavigate, selectedLang, setSelect
             <a href="/" className="flex items-center space-x-2 sm:space-x-3">
               <img
                 src="https://tomoe-world.com/wp-content/uploads/2024/05/cropped-cropped-スクリーンショット-2024-05-05-11.49.14.png"
-                alt={getLabel({ labelJa: '共笑®︎', labelEn: 'TOMOE' })}
+                alt={getLabel({ labelJa: '共笑®︎', labelEn: '共笑®︎' })}
                 className="h-12 w-auto sm:h-14 lg:h-16"
               />
               <div className="hidden sm:block">
                 <h1 className="text-xs sm:text-sm font-bold text-accent">
-                  {selectedLang === 'en' ? 'TOMOE' : (
+                  {selectedLang === 'en' ? '共笑®︎' : (
                     <span className="font-normal flex flex-col leading-tight" style={{ letterSpacing: '-0.025em' }}>
                       <span className="whitespace-nowrap">違いを笑いに。</span>
                       <span className="whitespace-nowrap">未来を共笑®に。</span>
@@ -109,7 +116,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, onNavigate, selectedLang, setSelect
               </div>
               <div className="sm:hidden">
                 <h1 className="text-xs font-bold text-accent">
-                  {selectedLang === 'en' ? 'TOMOE' : (
+                  {selectedLang === 'en' ? '共笑®︎' : (
                     <span className="font-normal flex flex-col leading-tight" style={{ letterSpacing: '-0.025em' }}>
                       <span className="whitespace-nowrap">違いを笑いに。</span>
                       <span className="whitespace-nowrap">未来を共笑®に。</span>
@@ -394,13 +401,13 @@ const Header = ({ isMenuOpen, setIsMenuOpen, onNavigate, selectedLang, setSelect
                     {item.submenu.map((subItem, subIndex) => (
                       <li key={subIndex}>
                         <div className="flex items-center justify-between">
-                          <a
-                            href={subItem.href}
+                        <a
+                          href={subItem.href}
                             className="block text-gray-700 text-sm sm:text-base hover:text-[#E6D5B8] transition-colors duration-200 py-1.5 sm:py-2 flex-1"
                             onClick={(e) => handleNavigation(e, subItem.id, Boolean(subItem.nestedSubmenu))}
-                          >
-                            {getLabel(subItem)}
-                          </a>
+                        >
+                          {getLabel(subItem)}
+                        </a>
                           {subItem.nestedSubmenu && (
                             <button
                               onClick={() => setOpenNestedDropdown(openNestedDropdown === `${index}-${subIndex}` ? null : `${index}-${subIndex}`)}

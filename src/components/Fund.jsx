@@ -56,7 +56,7 @@ const Fund = ({ language = 'ja' }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16">
         <article className="p-8 md:p-12 text-gray-700 leading-relaxed text-base md:text-lg space-y-6">
           <p className="text-2xl md:text-3xl font-display font-bold text-headings">
-            {t('共笑®︎基金', 'TOMOE Fund')}
+            {t('共笑®︎基金', '共笑®︎ Fund')}
           </p>
           <div className="space-y-2">
             <p className="text-xl md:text-2xl text-headings">

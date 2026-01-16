@@ -305,8 +305,8 @@ const Learning = ({ language = 'ja' }) => {
         {/* Top Runners Section */}
         <div className="max-w-6xl mx-auto px-4 mb-12 md:mb-16">
           <div className="text-center mb-10 md:mb-12">
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-800 mb-4 md:mb-6 flex items-center justify-center gap-3">
-              <span className="text-4xl md:text-5xl">🤝</span>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gray-800 mb-4 md:mb-6 flex items-baseline justify-center gap-3">
+              <span className="text-4xl md:text-5xl flex-shrink-0">🤝</span>
               <span>{t('各分野のトップランナーが伴走します', 'Top Runners in Each Field Will Accompany You')}</span>
             </h3>
           </div>

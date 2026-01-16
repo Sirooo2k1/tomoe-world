@@ -60,12 +60,12 @@ const Crew = ({ language = 'ja' }) => {
             <h3 className="text-3xl md:text-4xl font-display font-bold mb-2 text-headings leading-tight">
               {t(
                 <>
-                  TOMOE®︎<br />
+                  共笑®︎<br />
                   PROFESSIONAL<br />
                   CREW
                 </>,
                 <>
-                  TOMOE®︎<br />
+                  共笑®︎<br />
                   PROFESSIONAL<br />
                   CREW
                 </>

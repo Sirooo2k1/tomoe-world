@@ -7,7 +7,7 @@ const Footer = ({ language = 'ja' }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className="text-sm">
-            {t('© 共笑®︎Office. All rights reserved.', '© TOMOE Office. All rights reserved.')}
+            {t('© 共笑®︎Office. All rights reserved.', '© 共笑®︎ Office. All rights reserved.')}
           </p>
         </div>
       </div>

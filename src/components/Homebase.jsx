@@ -20,7 +20,7 @@ const Homebase = ({ language = 'ja' }) => {
         <div className="absolute inset-0 z-10 flex items-center justify-center">
           <div className="text-center px-4 max-w-4xl">
             <h2 
-              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-4 cursor-pointer transition-all duration-500 hover:scale-110 hover:rotate-1"
+              className="text-5xl md:text-7xl font-display font-bold mb-4 cursor-pointer transition-all duration-500 hover:scale-110 hover:rotate-1"
               style={{
                 background: 'linear-gradient(135deg, #ffffff 0%, #e0f2fe 25%, #fef3c7 50%, #e9d5ff 75%, #ffffff 100%)',
                 backgroundSize: '200% 200%',
@@ -149,7 +149,7 @@ const Homebase = ({ language = 'ja' }) => {
                 <div className="mb-5">
                   <h4 className="text-xl md:text-2xl font-display font-bold mb-2 lg:whitespace-nowrap">
                     <span className="text-gray-600">1.</span>
-                    <span className="text-headings">【経営・戦略】</span>
+                    <span className="text-headings">{t('【経営・戦略】', '【Management & Strategy】')}</span>
                     <span className="text-headings">{t('共笑®︎マネジメント', '共笑®︎ Management')}</span>
                   </h4>
                   <p className="text-sm md:text-base text-gray-600 mb-4">
@@ -220,7 +220,7 @@ const Homebase = ({ language = 'ja' }) => {
                 <div className="mb-5">
                   <h4 className="text-xl md:text-2xl font-display font-bold mb-2 lg:whitespace-nowrap">
                     <span className="text-orange-600">2.</span>
-                    <span className="text-headings">【教育・知性】</span>
+                    <span className="text-headings">{t('【教育・知性】', '【Education & Intelligence】')}</span>
                     <span className="text-headings">{t('共笑®︎アカデミー', '共笑®︎ Academy')}</span>
                   </h4>
                   <p className="text-sm md:text-base text-gray-600 mb-4">
@@ -291,7 +291,7 @@ const Homebase = ({ language = 'ja' }) => {
                 <div className="mb-5">
                   <h4 className="text-xl md:text-2xl font-display font-bold mb-2 lg:whitespace-nowrap">
                     <span className="text-green-600">3.</span>
-                    <span className="text-headings">【食・生活環境】</span>
+                    <span className="text-headings">{t('【食・生活環境】', '【Food & Living Environment】')}</span>
                     <span className="text-headings">{t('共笑®︎ライフ・ベース', '共笑®︎ Life Base')}</span>
                   </h4>
                   <p className="text-sm md:text-base text-gray-600 mb-4">
@@ -362,7 +362,7 @@ const Homebase = ({ language = 'ja' }) => {
                 <div className="mb-5">
                   <h4 className="text-xl md:text-2xl font-display font-bold mb-2 lg:whitespace-nowrap">
                     <span className="text-blue-600">4.</span>
-                    <span className="text-headings">【身体・健康】</span>
+                    <span className="text-headings">{t('【身体・健康】', '【Body & Health】')}</span>
                     <span className="text-headings">{t('共笑®︎ウェルネス・ラボ', '共笑®︎ Wellness Lab')}</span>
                   </h4>
                   <p className="text-sm md:text-base text-gray-600 mb-4">
@@ -433,7 +433,7 @@ const Homebase = ({ language = 'ja' }) => {
                 <div className="mb-5">
                   <h4 className="text-xl md:text-2xl font-display font-bold mb-2 lg:whitespace-nowrap">
                     <span className="text-purple-600">5.</span>
-                    <span className="text-headings">【心・魂・安全】</span>
+                    <span className="text-headings">{t('【心・魂・安全】', '【Mind, Soul & Safety】')}</span>
                     <span className="text-headings">{t('共笑®︎ライフ・シールド', '共笑®︎ Life Shield')}</span>
                   </h4>
                   <p className="text-sm md:text-base text-gray-600 mb-4">

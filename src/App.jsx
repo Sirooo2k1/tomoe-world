@@ -21,6 +21,10 @@ import Health from './components/Health'
 import Learning from './components/Learning'
 import Organization from './components/Organization'
 import Blog from './components/Blog'
+import BlogPost from './components/BlogPost'
+import NewYearPost from './components/NewYearPost'
+import HumanRightsPost from './components/HumanRightsPost'
+import OrganizationSupportPost from './components/OrganizationSupportPost'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -56,6 +60,11 @@ function App() {
         'learning': 'learning',
         'organization': 'organization',
         'blog': 'blog',
+        'blog-post': 'blog-post',
+        'blood-donation': 'blog-post',
+        'new-year': 'new-year',
+        'human-rights-post': 'human-rights-post',
+        'organization-support-post': 'organization-support-post',
         'ask': 'ask',
         'contact': 'ask'
       }
@@ -64,7 +73,7 @@ function App() {
     
     const hashToPage = (hash) => {
       const key = hash.replace('#', '')
-      if (['home', 'homebase', 'act', 'lectures', 'jyuku', 'fund', 'license', 'div', 'hr', 'intl', 'sdgs', 'shop', 'crew', 'health', 'learning', 'organization', 'blog', 'ask'].includes(key)) {
+      if (['home', 'homebase', 'act', 'lectures', 'jyuku', 'fund', 'license', 'div', 'hr', 'intl', 'sdgs', 'shop', 'crew', 'health', 'learning', 'organization', 'blog', 'blog-post', 'blood-donation', 'new-year', 'human-rights-post', 'organization-support-post', 'ask'].includes(key)) {
         return key
       }
       // legacy paths
@@ -115,7 +124,7 @@ function App() {
   }, [activePage])
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className={`min-h-screen flex flex-col lang-${language}`} data-lang={language}>
       <Header
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
@@ -201,7 +210,27 @@ function App() {
       )}
       {activePage === 'blog' && (
         <main className="flex-grow">
-          <Blog language={language} />
+          <Blog language={language} onNavigate={setActivePage} />
+        </main>
+      )}
+      {activePage === 'blog-post' && (
+        <main className="flex-grow">
+          <BlogPost language={language} onNavigate={setActivePage} />
+        </main>
+      )}
+      {activePage === 'new-year' && (
+        <main className="flex-grow">
+          <NewYearPost language={language} onNavigate={setActivePage} />
+        </main>
+      )}
+      {activePage === 'human-rights-post' && (
+        <main className="flex-grow">
+          <HumanRightsPost language={language} onNavigate={setActivePage} />
+        </main>
+      )}
+      {activePage === 'organization-support-post' && (
+        <main className="flex-grow">
+          <OrganizationSupportPost language={language} onNavigate={setActivePage} />
         </main>
       )}
       {activePage === 'ask' && (

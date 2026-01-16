@@ -11,7 +11,7 @@ const Activities = ({ language = 'ja' }) => {
       <div className="relative w-full overflow-hidden bg-black">
         <img
           src={mirrorLakeImage}
-          alt={t('共笑®︎活動', 'TOMOE Activities')}
+          alt={t('共笑®︎活動', '共笑®︎ Activities')}
           className="w-full h-auto object-contain block"
         />
           <div className="absolute inset-0 bg-gradient-to-b from-overlay/20 to-black/40" />
@@ -38,7 +38,7 @@ const Activities = ({ language = 'ja' }) => {
                 e.target.style.filter = 'drop-shadow(0 0 10px rgba(255,255,255,0.3))'
               }}
             >
-              {t('共笑®︎活動', 'TOMOE Activities')}
+              {t('共笑®︎活動', '共笑®︎ Activities')}
             </h2>
           </div>
         </div>
@@ -67,7 +67,7 @@ const Activities = ({ language = 'ja' }) => {
         <div className="mt-8 rounded-[32px] shadow-lg overflow-hidden aspect-[16/9] bg-[#F5F1E8] border-4 border-[#F5F1E8]">
           <img
             src={activitiesImage}
-            alt={t('共笑®︎活動', 'TOMOE Activities')}
+            alt={t('共笑®︎活動', '共笑®︎ Activities')}
             className="w-full h-full object-cover block scale-105 transform-gpu"
           />
         </div>
@@ -86,7 +86,7 @@ const Activities = ({ language = 'ja' }) => {
                 '「共笑®︎ホーム」は、Office KANDYが運営する完全予約制・会員制の多機能型拠点です。ここは、カフェであり、学び舎であり、スタジオであり、相談室。そして企業の戦略基地でもあります。',
                 '"共笑®︎ Home" is a fully reserved, membership-based multifunctional base operated by Office KANDY. It is a cafe, a learning space, a studio, a consultation room, and also a strategic base for companies.'
               )}
-            </p>
+          </p>
             <div className="flex justify-start pt-2">
               <a
                 href="/homebase"
@@ -141,7 +141,7 @@ const Activities = ({ language = 'ja' }) => {
             </div>
             <div className="space-y-1">
               <p className="text-xl font-bold text-headings">
-                {t('共笑®︎祭', 'TOMOE Festival')}
+                {t('共笑®︎祭', '共笑®︎ Festival')}
               </p>
               <p>
                 {t(

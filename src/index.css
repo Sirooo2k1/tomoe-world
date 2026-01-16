@@ -10,6 +10,21 @@
     font-style: normal;
   }
   
+  /* Apply Lora font for English content */
+  .lang-en,
+  [data-lang="en"],
+  [data-lang="en"] * {
+    font-family: "Lora", serif !important;
+    font-optical-sizing: auto;
+  }
+  
+  /* Keep Klee One for Japanese content */
+  .lang-ja,
+  [data-lang="ja"],
+  [data-lang="ja"] * {
+    font-family: "Klee One", cursive !important;
+  }
+  
   h1, h2, h3, h4 {
     @apply font-display font-bold;
   }
@@ -17,6 +32,13 @@
 
 .klee-one-regular {
   font-family: "Klee One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lora-regular {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }

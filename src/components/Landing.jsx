@@ -128,10 +128,9 @@ const Landing = ({ language = 'ja', onNavigate }) => {
                   overflow: 'visible'
                 }}>
                   {t(
-                    'ただ、共に生きるのではない。響き合い、高め合う。',
-                    'It\'s not just about living together. It\'s about resonating with one another and mutually elevating each other.'
+                    'ただ、共に生きるのではない。響き合い、高め合う。一歩先の共生へ。',
+                    'It\'s not just about living together. It\'s about resonating with one another and mutually elevating each other. Toward coexistence one step ahead.'
                   )}
-                  <span style={{ whiteSpace: 'nowrap' }}>一歩先の共生へ。</span>
                 </p>
                 <div className="text-gray-700 text-base md:text-lg max-w-4xl mx-auto mb-8 text-left">
                   <p className="leading-7 md:leading-8" style={{ lineHeight: '1.8' }}>
@@ -204,7 +203,7 @@ const Landing = ({ language = 'ja', onNavigate }) => {
             </div>
 
             {/* Management & Strategy Section */}
-            <div className="max-w-4xl mx-auto mt-8 mb-10 text-left">
+            <div className="mt-8 mb-10 text-left">
               <div className="mb-5">
                 <h4 className="text-xl md:text-2xl font-display font-bold text-headings mb-2 lg:whitespace-nowrap">
                   {t(
@@ -262,7 +261,7 @@ const Landing = ({ language = 'ja', onNavigate }) => {
             </div>
 
             {/* Education & Literacy Section */}
-            <div className="max-w-4xl mx-auto mt-10 mb-10 text-left">
+            <div className="mt-10 mb-10 text-left">
               <div className="mb-5">
                 <h4 className="text-xl md:text-2xl font-display font-bold text-headings mb-2 lg:whitespace-nowrap">
                   {t(
@@ -320,7 +319,7 @@ const Landing = ({ language = 'ja', onNavigate }) => {
             </div>
 
             {/* Hospitality & Well-being Section */}
-            <div className="max-w-4xl mx-auto mt-10 mb-10 text-left">
+            <div className="mt-10 mb-10 text-left">
               <div className="mb-5">
                 <h4 className="text-xl md:text-2xl font-display font-bold text-headings mb-2 lg:whitespace-nowrap">
                   {t(
@@ -378,7 +377,7 @@ const Landing = ({ language = 'ja', onNavigate }) => {
             </div>
 
             {/* Wellness & Physical Care Section */}
-            <div className="max-w-4xl mx-auto mt-10 mb-10 text-left">
+            <div className="mt-10 mb-10 text-left">
               <div className="mb-5">
                 <h4 className="text-xl md:text-2xl font-display font-bold text-headings mb-2 lg:whitespace-nowrap">
                   {t(
@@ -436,7 +435,7 @@ const Landing = ({ language = 'ja', onNavigate }) => {
             </div>
 
             {/* Spiritual & Total Care Section */}
-            <div className="max-w-4xl mx-auto mt-10 mb-10 text-left">
+            <div className="mt-10 mb-10 text-left">
               <div className="mb-5">
                 <h4 className="text-xl md:text-2xl font-display font-bold text-headings mb-2 lg:whitespace-nowrap">
                   {t(
