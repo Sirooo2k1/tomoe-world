@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tomoeworld.com/</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/homebase</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/homebase" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/homebase" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/act</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/act" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/act" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/lectures</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/lectures" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/lectures" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/jyuku</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/jyuku" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/jyuku" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/fund</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/fund" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/fund" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/license</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/license" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/license" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/div</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/div" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/div" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/hr</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/hr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/hr" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/intl</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/intl" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/intl" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/sdgs</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/sdgs" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/sdgs" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/shop</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/shop" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/shop" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/crew</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/crew" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/crew" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/health</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/health" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/health" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/learning</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/learning" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/learning" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/organization</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/organization" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/organization" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/blog</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/blog" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/blog-post</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/blog-post" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/blog-post" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/new-year</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/new-year" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/new-year" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/human-rights-post</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/human-rights-post" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/human-rights-post" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/organization-support-post</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/organization-support-post" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/organization-support-post" />
+  </url>
+  <url>
+    <loc>https://tomoeworld.com/ask</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://tomoeworld.com/ask" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tomoeworld.com/ask" />
+  </url>
+</urlset>
