@@ -18,7 +18,7 @@ const Blog = ({ language = 'ja', onNavigate }) => {
       '共笑®︎ Volunteer Practice Project ～ Smiles ...'
     ),
     category: t('❤️ 社会活動', '❤️ Social Activities'),
-    date: '2025.01.10',
+    date: '2026.01.10',
     location: t('JR大阪駅', 'JR Osaka Station'),
     goal: t('目標100名', 'Goal: 100 People'),
     image: featuredEventImage,
