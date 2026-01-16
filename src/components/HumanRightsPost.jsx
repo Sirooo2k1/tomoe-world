@@ -101,19 +101,19 @@ const HumanRightsPost = ({ language = 'ja', onNavigate }) => {
   ]
 
   const closingMessage = t(
-    '「違いを力に変え、未来を創る」──その第一歩として、人権と平和をテーマにした講演をぜひご活用ください。"共笑®︎"の理念に基づいた実践的な視点で、職場や地域、教育現場に笑顔と共感の輪を広げます。\n\n私たちが抱える"ちがい"を、課題ではなく新たな価値創造の原動力として捉え直すことで、より平和で持続可能な社会を築くことができます。講演依頼やご相談は、"共笑®︎"事務局までお気軽にご連絡ください。一緒に、違いを活かし、未来を共に創る取り組みを始めましょう！',
-    '"Turning differences into strength and creating the future"──As a first step, please make use of lectures on the theme of human rights and peace. Based on the practical perspective of the "共笑®︎" philosophy, we spread circles of smiles and empathy in workplaces, communities, and educational settings.\n\nBy reconceiving the "differences" we have not as challenges but as driving forces for new value creation, we can build a more peaceful and sustainable society. For lecture requests or inquiries, please feel free to contact the "共笑®︎" office. Let\'s start working together to leverage differences and create the future together!'
+    '「違いを力に変え、未来を創る」─その第一歩として、人権と平和をテーマにした講演をぜひご活用ください。"共笑®︎"の理念に基づいた実践的な視点で、職場や地域、教育現場に笑顔と共感の輪を広げます。\n\n私たちが抱える"ちがい"を、課題ではなく新たな価値創造の原動力として捉え直すことで、より平和で持続可能な社会を築くことができます。講演依頼やご相談は、"共笑®︎"事務局までお気軽にご連絡ください。一緒に、違いを活かし、未来を共に創る取り組みを始めましょう！',
+    '"Turning differences into strength and creating the future"─As a first step, please make use of lectures on the theme of human rights and peace. Based on the practical perspective of the "共笑®︎" philosophy, we spread circles of smiles and empathy in workplaces, communities, and educational settings.\n\nBy reconceiving the "differences" we have not as challenges but as driving forces for new value creation, we can build a more peaceful and sustainable society. For lecture requests or inquiries, please feel free to contact the "共笑®︎" office. Let\'s start working together to leverage differences and create the future together!'
   )
 
   const hashtags = [
-    { tag: '#にしゃんた', color: 'text-blue-600' },
-    { tag: '#ボランティア', color: 'text-indigo-600' },
-    { tag: '#共生社会', color: 'text-cyan-600' },
-    { tag: '#共笑', color: 'text-blue-700' },
-    { tag: '#大阪駅', color: 'text-indigo-700' },
-    { tag: '#献血', color: 'text-red-600' },
-    { tag: '#社会貢献', color: 'text-emerald-600' },
-    { tag: '#羽衣国際大学', color: 'text-purple-600' }
+    { tag: t('#にしゃんた', '#Nishanta'), color: 'text-blue-600' },
+    { tag: t('#ボランティア', '#Volunteer'), color: 'text-indigo-600' },
+    { tag: t('#共生社会', '#CoexistenceSociety'), color: 'text-cyan-600' },
+    { tag: t('#共笑', '#共笑'), color: 'text-blue-700' },
+    { tag: t('#大阪駅', '#OsakaStation'), color: 'text-indigo-700' },
+    { tag: t('#献血', '#BloodDonation'), color: 'text-red-600' },
+    { tag: t('#社会貢献', '#SocialContribution'), color: 'text-emerald-600' },
+    { tag: t('#羽衣国際大学', '#HagoromoInternationalUniversity'), color: 'text-purple-600' }
   ]
 
   return (
@@ -293,7 +293,15 @@ const HumanRightsPost = ({ language = 'ja', onNavigate }) => {
         {/* Back to Blog Button */}
         <div className="mt-8 text-center">
           <button
-            onClick={() => onNavigate && onNavigate('blog')}
+            onClick={() => {
+              if (onNavigate) {
+                onNavigate('blog')
+                // Set hash to scroll to Activities & Articles section
+                setTimeout(() => {
+                  window.location.hash = '#activities-articles'
+                }, 100)
+              }
+            }}
             className="inline-flex items-center gap-2 text-sm text-blue-700 hover:text-blue-800 font-semibold bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg border border-blue-200 transition-all group"
           >
             <svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

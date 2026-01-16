@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import nishantomodiverImage from '../Images/nishantomodiver.png'
 import nishantaImgPng from '../Images/nishanta_img.png'
 import featuredEventImage from '../images_blog/IMG_1754-scaled.jpeg'
@@ -8,6 +8,8 @@ import healthSupportImage from '../images_blog/pixta.jpg'
 
 const Blog = ({ language = 'ja', onNavigate }) => {
   const t = (ja, en) => (language === 'en' ? en : ja)
+  const activitiesSectionRef = useRef(null)
+  const featuredSectionRef = useRef(null)
   
   // Sample blog posts data - in real app, this would come from API or CMS
   const featuredPost = {
@@ -71,6 +73,71 @@ const Blog = ({ language = 'ja', onNavigate }) => {
   const [hoveredCard, setHoveredCard] = useState(null)
   const [selectedImage, setSelectedImage] = useState(null)
 
+  // Scroll to sections if hash is present
+  useEffect(() => {
+    const handleScroll = () => {
+      const hash = window.location.hash
+      
+      // Scroll to Activities & Articles section
+      if (hash === '#activities-articles' && activitiesSectionRef.current) {
+        const element = activitiesSectionRef.current
+        if (element) {
+          const header = document.querySelector('header')
+          const headerHeight = header ? header.offsetHeight : 80
+          const spacing = 20
+          const totalOffset = headerHeight + spacing
+          
+          const elementTop = element.offsetTop
+          const scrollPosition = elementTop - totalOffset
+          
+          window.scrollTo({
+            top: Math.max(0, scrollPosition),
+            behavior: 'smooth'
+          })
+          
+          setTimeout(() => {
+            window.history.replaceState(null, '', window.location.pathname)
+          }, 500)
+        }
+      }
+      
+      // Scroll to Featured Story section
+      if (hash === '#featured-story' && featuredSectionRef.current) {
+        const element = featuredSectionRef.current
+        if (element) {
+          const header = document.querySelector('header')
+          const headerHeight = header ? header.offsetHeight : 80
+          const spacing = 20
+          const totalOffset = headerHeight + spacing
+          
+          const elementTop = element.offsetTop
+          const scrollPosition = elementTop - totalOffset
+          
+          window.scrollTo({
+            top: Math.max(0, scrollPosition),
+            behavior: 'smooth'
+          })
+          
+          setTimeout(() => {
+            window.history.replaceState(null, '', window.location.pathname)
+          }, 500)
+        }
+      }
+    }
+    
+    // Check immediately and also listen for hash changes
+    handleScroll()
+    window.addEventListener('hashchange', handleScroll)
+    
+    // Also check after a delay in case component just mounted
+    const timeoutId = setTimeout(handleScroll, 300)
+    
+    return () => {
+      window.removeEventListener('hashchange', handleScroll)
+      clearTimeout(timeoutId)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-[#FAF8F0]">
       {/* Hero Section */}
@@ -122,7 +189,7 @@ const Blog = ({ language = 'ja', onNavigate }) => {
       </section>
 
       {/* Featured Story Section */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <section id="featured-story" ref={featuredSectionRef} className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-800 mb-2">
             {t('✨ 特集記事', '✨ Featured Story')}
@@ -197,7 +264,7 @@ const Blog = ({ language = 'ja', onNavigate }) => {
       </section>
 
       {/* Activities & Articles Grid */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <section id="activities-articles" ref={activitiesSectionRef} className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-800 mb-2">
             {t('📚 活動・記事', '📚 Activities & Articles')}

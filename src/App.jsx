@@ -30,7 +30,16 @@ import OrganizationSupportPost from './components/OrganizationSupportPost'
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activePage, setActivePage] = useState('home')
-  const [language, setLanguage] = useState('ja')
+  // Load language from localStorage or default to 'ja'
+  const [language, setLanguage] = useState(() => {
+    const savedLanguage = localStorage.getItem('tomoe_language')
+    return savedLanguage || 'ja'
+  })
+
+  // Save language to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('tomoe_language', language)
+  }, [language])
 
   // Map path/hash -> page id
   useEffect(() => {

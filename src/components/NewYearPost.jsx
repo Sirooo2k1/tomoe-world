@@ -74,7 +74,7 @@ const NewYearPost = ({ language = 'ja', onNavigate }) => {
             </div>
             <div className="mt-6 pt-4 border-t border-gray-200">
               <span className="text-lg md:text-xl font-semibold text-red-600 hover:text-red-700 transition-colors cursor-pointer">
-                #共笑®
+                {t('#共笑®', '#共笑®')}
               </span>
             </div>
           </div>
@@ -83,7 +83,15 @@ const NewYearPost = ({ language = 'ja', onNavigate }) => {
         {/* Back to Blog Button */}
         <div className="mt-8 text-center">
           <button
-            onClick={() => onNavigate && onNavigate('blog')}
+            onClick={() => {
+              if (onNavigate) {
+                onNavigate('blog')
+                // Set hash to scroll to Activities & Articles section
+                setTimeout(() => {
+                  window.location.hash = '#activities-articles'
+                }, 100)
+              }
+            }}
             className="inline-flex items-center gap-2 text-sm text-red-700 hover:text-red-800 font-semibold bg-red-50 hover:bg-red-100 px-4 py-2 rounded-lg border border-red-200 transition-all group"
           >
             <svg className="w-4 h-4 group-hover:-translate-x-1 transition-transform text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -367,7 +367,15 @@ const BlogPost = ({ language = 'ja', onNavigate }) => {
         {/* Back Button */}
         <div className="text-center mt-12">
           <button
-            onClick={() => onNavigate && onNavigate('blog')}
+            onClick={() => {
+              if (onNavigate) {
+                onNavigate('blog')
+                // Set hash to scroll to Featured Story section
+                setTimeout(() => {
+                  window.location.hash = '#featured-story'
+                }, 100)
+              }
+            }}
             className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 text-gray-700 font-medium rounded-full shadow-md hover:shadow-lg transition-all duration-200"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
