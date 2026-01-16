@@ -194,7 +194,7 @@ const Lectures = ({ language = 'ja' }) => {
                   </p>
                 <div className="flex justify-center">
                   <a
-                    href="#div"
+                    href="/div"
                     className="inline-flex items-center gap-0.5 px-1.5 py-2 rounded-full bg-[#F5F1E8] text-headings font-semibold text-sm md:text-base whitespace-nowrap hover:bg-[#e6d5b8]"
                   >
                     <span>{t('続きを読む ➞', 'Read more ➞')}</span>
@@ -231,7 +231,7 @@ const Lectures = ({ language = 'ja' }) => {
                   </p>
                 <div className="flex justify-center">
                   <a
-                    href="#intl"
+                    href="/intl"
                     className="inline-flex items-center gap-0.5 px-1.5 py-2 rounded-full bg-[#F5F1E8] text-headings font-semibold text-sm md:text-base whitespace-nowrap hover:bg-[#e6d5b8]"
                   >
                     <span>{t('続きを読む ➞', 'Read more ➞')}</span>
@@ -268,7 +268,7 @@ const Lectures = ({ language = 'ja' }) => {
                   </p>
                 <div className="flex justify-center">
                   <a
-                    href="#sdgs"
+                    href="/sdgs"
                     className="inline-flex items-center gap-0.5 px-1.5 py-2 rounded-full bg-[#F5F1E8] text-headings font-semibold text-sm md:text-base whitespace-nowrap hover:bg-[#e6d5b8]"
                   >
                     <span>{t('続きを読む ➞', 'Read more ➞')}</span>
@@ -312,7 +312,7 @@ const Lectures = ({ language = 'ja' }) => {
                   </section>
                   <div className="flex justify-center">
                     <a
-                      href="#hr"
+                      href="/hr"
                       className="inline-flex items-center gap-0.5 px-1.5 py-2 rounded-full bg-[#F5F1E8] text-headings font-semibold text-sm md:text-base whitespace-nowrap hover:bg-[#e6d5b8]"
                     >
                       <span>{t('続きを読む ➞', 'Read more ➞')}</span>
