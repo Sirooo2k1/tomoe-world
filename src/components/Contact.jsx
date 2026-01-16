@@ -147,7 +147,7 @@ const Contact = ({ language = 'ja' }) => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder={t('お名前は何ですか?', 'What is your name?')}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black text-xs placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-headings focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-headings focus:border-transparent"
                     required
                   />
                 </div>
@@ -162,7 +162,7 @@ const Contact = ({ language = 'ja' }) => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder={t('メールアドレスは何ですか?', 'What is your email address?')}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black text-xs placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-headings focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-headings focus:border-transparent"
                     required
                   />
                 </div>
@@ -177,7 +177,7 @@ const Contact = ({ language = 'ja' }) => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder={t('電話番号は何ですか?', 'What is your phone number?')}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black text-xs placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-headings focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-headings focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -191,7 +191,7 @@ const Contact = ({ language = 'ja' }) => {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder={t('件名は何ですか?', 'What is the subject?')}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black text-xs placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-headings focus:border-transparent"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-headings focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -205,7 +205,7 @@ const Contact = ({ language = 'ja' }) => {
                     onChange={handleChange}
                     placeholder={t('何かお伝えしたいことはありますか?', 'Is there anything you would like to tell us?')}
                     rows="6"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black text-xs placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-headings focus:border-transparent resize-vertical"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-headings focus:border-transparent resize-vertical"
                     required
                   />
                 </div>
